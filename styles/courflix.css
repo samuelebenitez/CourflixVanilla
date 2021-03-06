@@ -1,0 +1,1207 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 0px;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.603);
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 11;
+}
+
+@media (max-width: 960px) {
+  .header {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.header .burguer-icon .fa-bars {
+  height: 40px;
+  width: 40px;
+  color: white;
+  margin: 1em;
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .header .burguer-icon .fa-bars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1em 1.5em;
+  }
+}
+
+@media (max-width: 320px) {
+  .header .burguer-icon .fa-bars {
+    margin: 0.5em;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.header .logo {
+  padding: 1em;
+  margin-left: 72px;
+}
+
+@media (max-width: 960px) {
+  .header .logo {
+    margin: 0px;
+    padding: 1em 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header .logo {
+    padding: 0.3em;
+  }
+}
+
+.header .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 2em;
+}
+
+@media (max-width: 960px) {
+  .header .links {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 99%;
+    margin: 0.1px;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 1000vh;
+  }
+  .header .links.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header .links .link-item {
+  color: white;
+  text-decoration: none;
+  padding: 1.6em;
+  font-family: "Open Sans";
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.header .links .link-item:hover {
+  background-color: rgba(255, 255, 255, 0.432);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hero {
+  background-image: url("../assets/images/daredevil-back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Open Sans";
+  padding: 5.4em 5.4em 0 5.4em;
+  -webkit-box-shadow: inset 0px 0px 70px 70px black;
+          box-shadow: inset 0px 0px 70px 70px black;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    padding: 1em 0.5em;
+    background-size: cover;
+  }
+}
+
+.hero .h1 img {
+  margin: 4rem 0;
+  width: 30%;
+  height: 30%;
+}
+
+.hero .subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero .subtitle p {
+  margin-right: 1em;
+}
+
+.hero .subtitle .sub1 {
+  color: #009c04;
+  font-weight: 600;
+  font-family: "Open Sans";
+}
+
+@media (max-width: 320px) {
+  .hero .subtitle .sub1 {
+    display: none;
+  }
+}
+
+.hero .subtitle .sub3 {
+  border: 1px solid black;
+  height: 1.6em;
+  border-radius: 10px;
+  padding: 0 0.5em;
+  color: black;
+  font-weight: bolder;
+  font-family: "Open Sans";
+}
+
+@media (max-width: 320px) {
+  .hero .subtitle .sub3 {
+    color: white;
+    border: 1px solid white;
+  }
+}
+
+.hero .subtitle .sub4 {
+  font-family: "Open Sans";
+  font-weight: 600;
+  color: black;
+  font-weight: bolder;
+}
+
+@media (max-width: 320px) {
+  .hero .subtitle .sub4 {
+    color: white;
+    white-space: nowrap;
+  }
+}
+
+.hero .buttons {
+  margin-right: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .buttons .button {
+  background-color: rgba(255, 255, 255, 0.349);
+  border: none;
+  height: 50px;
+  color: white;
+  border-radius: 9px;
+  width: 150px;
+  margin-right: 20px;
+  font-weight: lighter;
+  padding-left: 1em;
+}
+
+.hero .buttons .button:hover.repro {
+  background: red;
+}
+
+.hero .buttons .button a {
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+
+.hero .buttons .button:hover {
+  background-color: rgba(255, 255, 255, 0.644);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hero .buttons .fa-thumbs-up {
+  width: 50px;
+  height: 50px;
+  margin: 1em;
+  border: 2px solid #231f1f;
+  border-radius: 32px;
+  padding: 0.4em;
+  color: #231f1f;
+}
+
+.hero .buttons .fa-thumbs-up:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: rgba(255, 255, 255, 0.534);
+}
+
+@media (max-width: 768px) {
+  .hero .buttons .fa-thumbs-up {
+    display: none;
+  }
+}
+
+.hero .buttons .fa-thumbs-down {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #231f1f;
+  border-radius: 32px;
+  padding: 0.4em;
+  color: #231f1f;
+}
+
+.hero .buttons .fa-thumbs-down:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: rgba(255, 255, 255, 0.534);
+}
+
+@media (max-width: 768px) {
+  .hero .buttons .fa-thumbs-down {
+    display: none;
+  }
+}
+
+.hero .text {
+  font-size: 1em;
+  width: 37%;
+  line-height: 33px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 960px) {
+  .hero .text {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .text {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero .text {
+    display: none;
+  }
+}
+
+.series-wrapper {
+  padding: 5.4em;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper {
+    padding: 0 0.5em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper {
+    padding: 1em 0.5em;
+  }
+}
+
+.series-wrapper .chapters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.series-wrapper .chapters .chap-img {
+  width: 21.25em;
+  height: 11.875em;
+  background-size: cover;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapters .chap-img {
+    width: 15.25em;
+    height: 8.875em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapters .chap-img {
+    width: 8.188em;
+    height: 4.688em;
+  }
+}
+
+.series-wrapper .chapters .chap-text {
+  color: white;
+  width: 70%;
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.series-wrapper .chapters .chap-text .chap-title {
+  margin: 0;
+  margin-left: 2em;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapters .chap-text .chap-title {
+    font-size: 1em;
+    margin-left: 1.5em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapters .chap-text .chap-title {
+    margin-left: 1em;
+  }
+}
+
+.series-wrapper .chapters .chap-text .chap-descrip {
+  margin-left: 3.8em;
+  font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapters .chap-text .chap-descrip {
+    font-size: 0.7em;
+    margin-left: 2.3em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapters .chap-text .chap-descrip {
+    margin-left: 1.4em;
+  }
+}
+
+.series-wrapper .chapter1 .chap-img {
+  background-image: url(../assets/images/chapter1.jpg);
+}
+
+.series-wrapper .chapter1 .chap-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.series-wrapper .chapter1 .chap-img:hover:after {
+  content: "Episodio 1";
+  position: absolute;
+  top: 82%;
+  left: 32%;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter1 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter1 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 0.7em;
+  }
+}
+
+.series-wrapper .chapter1 .chap-img:hover:before {
+  content: url(../assets/images/play-icon.svg);
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  -webkit-animation: 2s play;
+          animation: 2s play;
+  border-radius: 50px;
+}
+
+@-webkit-keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter1 .chap-img:hover:before {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter1 .chap-img:hover:before {
+    width: 3em;
+    height: 3em;
+    top: 16%;
+    left: 32%;
+  }
+}
+
+.series-wrapper .chapter2 .chap-img {
+  background-image: url(../assets/images/chapter2.jpg);
+}
+
+.series-wrapper .chapter2 .chap-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.series-wrapper .chapter2 .chap-img:hover:after {
+  content: "Episodio 2";
+  position: absolute;
+  top: 82%;
+  left: 32%;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter2 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter2 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 0.7em;
+  }
+}
+
+.series-wrapper .chapter2 .chap-img:hover:before {
+  content: url(../assets/images/play-icon.svg);
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  -webkit-animation: 2s play;
+          animation: 2s play;
+  border-radius: 50px;
+}
+
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter2 .chap-img:hover:before {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter2 .chap-img:hover:before {
+    width: 3em;
+    height: 3em;
+    top: 16%;
+    left: 32%;
+  }
+}
+
+.series-wrapper .chapter3 .chap-img {
+  background-image: url(../assets/images/chapter3.jpg);
+}
+
+.series-wrapper .chapter3 .chap-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.series-wrapper .chapter3 .chap-img:hover:after {
+  content: "Episodio 3";
+  position: absolute;
+  top: 82%;
+  left: 32%;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter3 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter3 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 0.7em;
+  }
+}
+
+.series-wrapper .chapter3 .chap-img:hover:before {
+  content: url(../assets/images/play-icon.svg);
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  -webkit-animation: 2s play;
+          animation: 2s play;
+  border-radius: 50px;
+}
+
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter3 .chap-img:hover:before {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter3 .chap-img:hover:before {
+    width: 3em;
+    height: 3em;
+    top: 16%;
+    left: 32%;
+  }
+}
+
+.series-wrapper .chapter4 .chap-img {
+  background-image: url(../assets/images/chapter4.jpg);
+}
+
+.series-wrapper .chapter4 .chap-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.series-wrapper .chapter4 .chap-img:hover:after {
+  content: "Episodio 4";
+  position: absolute;
+  top: 82%;
+  left: 32%;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter4 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter4 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 0.7em;
+  }
+}
+
+.series-wrapper .chapter4 .chap-img:hover:before {
+  content: url(../assets/images/play-icon.svg);
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  -webkit-animation: 2s play;
+          animation: 2s play;
+  border-radius: 50px;
+}
+
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter4 .chap-img:hover:before {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter4 .chap-img:hover:before {
+    width: 3em;
+    height: 3em;
+    top: 16%;
+    left: 32%;
+  }
+}
+
+.series-wrapper .chapter5 .chap-img {
+  background-image: url(../assets/images/chapter5.jpg);
+}
+
+.series-wrapper .chapter5 .chap-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.series-wrapper .chapter5 .chap-img:hover:after {
+  content: "Episodio 5";
+  position: absolute;
+  top: 82%;
+  left: 32%;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter5 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter5 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 0.7em;
+  }
+}
+
+.series-wrapper .chapter5 .chap-img:hover:before {
+  content: url(../assets/images/play-icon.svg);
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  -webkit-animation: 2s play;
+          animation: 2s play;
+  border-radius: 50px;
+}
+
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter5 .chap-img:hover:before {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter5 .chap-img:hover:before {
+    width: 3em;
+    height: 3em;
+    top: 16%;
+    left: 32%;
+  }
+}
+
+.series-wrapper .chapter6 .chap-img {
+  background-image: url(../assets/images/chapter6.jpg);
+}
+
+.series-wrapper .chapter6 .chap-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.series-wrapper .chapter6 .chap-img:hover:after {
+  content: "Episodio 6";
+  position: absolute;
+  top: 82%;
+  left: 32%;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter6 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter6 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 0.7em;
+  }
+}
+
+.series-wrapper .chapter6 .chap-img:hover:before {
+  content: url(../assets/images/play-icon.svg);
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  -webkit-animation: 2s play;
+          animation: 2s play;
+  border-radius: 50px;
+}
+
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter6 .chap-img:hover:before {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter6 .chap-img:hover:before {
+    width: 3em;
+    height: 3em;
+    top: 16%;
+    left: 32%;
+  }
+}
+
+.series-wrapper .chapter7 .chap-img {
+  background-image: url(../assets/images/chapter7.jpg);
+}
+
+.series-wrapper .chapter7 .chap-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.series-wrapper .chapter7 .chap-img:hover:after {
+  content: "Episodio 7";
+  position: absolute;
+  top: 82%;
+  left: 32%;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter7 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter7 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 0.7em;
+  }
+}
+
+.series-wrapper .chapter7 .chap-img:hover:before {
+  content: url(../assets/images/play-icon.svg);
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  -webkit-animation: 2s play;
+          animation: 2s play;
+  border-radius: 50px;
+}
+
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter7 .chap-img:hover:before {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter7 .chap-img:hover:before {
+    width: 3em;
+    height: 3em;
+    top: 16%;
+    left: 32%;
+  }
+}
+
+.series-wrapper .chapter8 .chap-img {
+  background-image: url(../assets/images/chapter9.jpg);
+}
+
+.series-wrapper .chapter8 .chap-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.series-wrapper .chapter8 .chap-img:hover:after {
+  content: "Episodio 8";
+  position: absolute;
+  top: 82%;
+  left: 32%;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter8 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter8 .chap-img:hover:after {
+    top: 79%;
+    left: 30%;
+    font-size: 0.7em;
+  }
+}
+
+.series-wrapper .chapter8 .chap-img:hover:before {
+  content: url(../assets/images/play-icon.svg);
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  -webkit-animation: 2s play;
+          animation: 2s play;
+  border-radius: 50px;
+}
+
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 99;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.616);
+  }
+}
+
+@media (max-width: 768px) {
+  .series-wrapper .chapter8 .chap-img:hover:before {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    top: 23%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 320px) {
+  .series-wrapper .chapter8 .chap-img:hover:before {
+    width: 3em;
+    height: 3em;
+    top: 16%;
+    left: 32%;
+  }
+}
+
+.footer {
+  margin: 0 auto;
+  padding: 0 5.4em;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0 2em;
+  }
+}
+
+.footer .columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer .columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer .columns .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .columns .column a {
+  text-decoration: none;
+  color: gray;
+  font-family: "Open Sans";
+  padding: 5px;
+  font-size: 0.8em;
+  width: 190px;
+}
+
+@media (max-width: 320px) {
+  .footer .columns .column a {
+    font-size: 0.7em;
+  }
+}
+
+.footer .columns .column a:hover {
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.footer .icons {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+
+.footer .icons span {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .icons span:hover {
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.footer .icons span .fa-facebook-square {
+  margin: 40px;
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 320px) {
+  .footer .icons span .fa-facebook-square {
+    margin: 15px;
+  }
+}
+
+.footer .icons span .fa-instagram {
+  margin: 40px;
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 320px) {
+  .footer .icons span .fa-instagram {
+    margin: 15px;
+  }
+}
+
+.footer .icons span .fa-twitter {
+  margin: 40px;
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 320px) {
+  .footer .icons span .fa-twitter {
+    margin: 15px;
+  }
+}
+
+.footer .icons span .fa-youtube {
+  margin: 40px;
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 320px) {
+  .footer .icons span .fa-youtube {
+    margin: 15px;
+  }
+}
+/*# sourceMappingURL=courflix.css.map */

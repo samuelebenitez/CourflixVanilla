@@ -1,0 +1,898 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+$letter1: "Open Sans";
+$padding1: 5.4em;
+$tablet: 768px;
+$smartPhone: 320px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 0px;
+}
+.wrapper {
+  overflow: hidden;
+}
+.header {
+  background-color: rgba(0, 0, 0, 0.603);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 11;
+  @media (max-width: 960px) {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .burguer-icon {
+    .fa-bars {
+      height: 40px;
+      width: 40px;
+      color: white;
+      margin: 1em;
+      display: none;
+      @media (max-width: 960px) {
+        display: flex;
+        margin: 1em 1.5em;
+      }
+      @media (max-width: $smartPhone) {
+        margin: 0.5em;
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+  .logo {
+    padding: 1em;
+    margin-left: 72px;
+    @media (max-width: 960px) {
+      margin: 0px;
+      padding: 1em 0px;
+    }
+    @media (max-width: $smartPhone) {
+      padding: 0.3em;
+    }
+  }
+
+  .links {
+    display: flex;
+    margin: 0 2em;
+
+    @media (max-width: 960px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 99%;
+      margin: 0.1px;
+      background-color: rgba(0, 0, 0, 0.9);
+      height: 1000vh;
+
+      &.open {
+        display: flex;
+      }
+    }
+
+    .link-item {
+      color: white;
+      text-decoration: none;
+      padding: 1.6em;
+      font-family: $letter1;
+      font-weight: bold;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.432);
+        transition: 1s;
+      }
+    }
+  }
+}
+.hero {
+  background-image: url("../assets/images/daredevil-back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: $letter1;
+  padding: $padding1 $padding1 0 $padding1;
+  box-shadow: inset 0px 0px 70px 70px rgba(0, 0, 0, 9);
+  @media (max-width: $tablet) {
+    padding: 2em;
+  }
+  @media (max-width: $smartPhone) {
+    padding: 1em 0.5em;
+    background-size: cover;
+  }
+
+  .h1 {
+    img {
+      margin: 4rem 0;
+      width: 30%;
+      height: 30%;
+    }
+  }
+  .subtitle {
+    display: flex;
+    p {
+      margin-right: 1em;
+    }
+    .sub1 {
+      color: #009c04;
+      font-weight: 600;
+      font-family: $letter1;
+      @media (max-width: $smartPhone) {
+        display: none;
+      }
+    }
+    .sub3 {
+      border: 1px solid black;
+      height: 1.6em;
+      border-radius: 10px;
+      padding: 0 0.5em;
+      color: black;
+      font-weight: bolder;
+      font-family: $letter1;
+      @media (max-width: $smartPhone) {
+        color: white;
+        border: 1px solid white;
+      }
+    }
+    .sub4 {
+      font-family: $letter1;
+      font-weight: 600;
+      color: black;
+      font-weight: bolder;
+      @media (max-width: $smartPhone) {
+        color: white;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .buttons {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+
+    .button {
+      background-color: rgba(255, 255, 255, 0.349);
+      border: none;
+      height: 50px;
+      color: white;
+      border-radius: 9px;
+      width: 150px;
+      margin-right: 20px;
+      font-weight: lighter;
+      padding-left: 1em;
+
+      &:hover.repro {
+        background: red;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.644);
+        transition: 1s;
+      }
+    }
+
+    .fa-thumbs-up {
+      width: 50px;
+      height: 50px;
+      margin: 1em;
+      border: 2px solid #231f1f;
+      border-radius: 32px;
+      padding: 0.4em;
+      color: #231f1f;
+      &:hover {
+        transform: scale(1.1);
+        transition: 1s;
+        background-color: rgba(255, 255, 255, 0.534);
+      }
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    .fa-thumbs-down {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #231f1f;
+      border-radius: 32px;
+      padding: 0.4em;
+      color: #231f1f;
+      &:hover {
+        transform: scale(1.1);
+        transition: 1s;
+        background-color: rgba(255, 255, 255, 0.534);
+      }
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+  .text {
+    font-size: 1em;
+    width: 37%;
+    line-height: 33px;
+    letter-spacing: 1px;
+    @media (max-width: 960px) {
+      width: auto;
+    }
+    @media (max-width: $tablet) {
+      font-size: 0.8em;
+    }
+    @media (max-width: $smartPhone) {
+      display: none;
+    }
+  }
+}
+.series-wrapper {
+  padding: $padding1;
+  @media (max-width: $tablet) {
+    padding: 0 0.5em;
+  }
+  @media (max-width: $smartPhone) {
+    padding: 1em 0.5em;
+  }
+
+  .chapters {
+    display: flex;
+    margin-bottom: 2em;
+    .chap-img {
+      width: 21.25em;
+      height: 11.875em;
+      background-size: cover;
+      position: relative;
+      transition: 1s;
+      flex-shrink: 0;
+      @media (max-width: $tablet) {
+        width: 15.25em;
+        height: 8.875em;
+      }
+      @media (max-width: $smartPhone) {
+        width: 8.188em;
+        height: 4.688em;
+      }
+    }
+    .chap-text {
+      color: white;
+      width: 70%;
+      font-family: $letter1;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+
+      .chap-title {
+        margin: 0;
+        margin-left: 2em;
+        padding: 0;
+
+        @media (max-width: $tablet) {
+          font-size: 1em;
+          margin-left: 1.5em;
+        }
+        @media (max-width: $smartPhone) {
+          margin-left: 1em;
+        }
+      }
+      .chap-descrip {
+        margin-left: 3.8em;
+        font-size: 0.8em;
+        @media (max-width: $tablet) {
+          font-size: 0.7em;
+          margin-left: 2.3em;
+        }
+        @media (max-width: $smartPhone) {
+          margin-left: 1.4em;
+        }
+      }
+    }
+  }
+
+  .chapter1 {
+    .chap-img {
+      background-image: url(../assets/images/chapter1.jpg);
+
+      &:hover {
+        transform: scale(1.1);
+        &:after {
+          content: "Episodio 1";
+          position: absolute;
+          top: 82%;
+          left: 32%;
+          font-family: $letter1;
+          font-size: 1.5em;
+          transition: 1s;
+          color: white;
+          @media (max-width: $tablet) {
+            top: 79%;
+            left: 30%;
+            font-size: 1.2em;
+          }
+          @media (max-width: $smartPhone) {
+            top: 79%;
+            left: 30%;
+            font-size: 0.7em;
+          }
+        }
+        &:before {
+          content: url(../assets/images/play-icon.svg);
+          width: 6em;
+          height: 6em;
+          position: absolute;
+          top: 25%;
+          left: 35%;
+          animation: 2s play;
+          border-radius: 50px;
+          @keyframes play {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 99;
+              transform: scale(1.1);
+              background-color: rgba(255, 255, 255, 0.616);
+            }
+          }
+
+          @media (max-width: $tablet) {
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+          }
+          @media (max-width: $smartPhone) {
+            width: 3em;
+            height: 3em;
+            top: 16%;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+  .chapter2 {
+    .chap-img {
+      background-image: url(../assets/images/chapter2.jpg);
+
+      &:hover {
+        transform: scale(1.1);
+        &:after {
+          content: "Episodio 2";
+          position: absolute;
+          top: 82%;
+          left: 32%;
+          font-family: $letter1;
+          font-size: 1.5em;
+          transition: 1s;
+          color: white;
+          @media (max-width: $tablet) {
+            top: 79%;
+            left: 30%;
+            font-size: 1.2em;
+          }
+          @media (max-width: $smartPhone) {
+            top: 79%;
+            left: 30%;
+            font-size: 0.7em;
+          }
+        }
+        &:before {
+          content: url(../assets/images/play-icon.svg);
+          width: 6em;
+          height: 6em;
+          position: absolute;
+          top: 25%;
+          left: 35%;
+          animation: 2s play;
+          border-radius: 50px;
+          @keyframes play {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 99;
+              transform: scale(1.1);
+              background-color: rgba(255, 255, 255, 0.616);
+            }
+          }
+          @media (max-width: $tablet) {
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+          }
+
+          @media (max-width: $smartPhone) {
+            width: 3em;
+            height: 3em;
+            top: 16%;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+  .chapter3 {
+    .chap-img {
+      background-image: url(../assets/images/chapter3.jpg);
+
+      &:hover {
+        transform: scale(1.1);
+        &:after {
+          content: "Episodio 3";
+          position: absolute;
+          top: 82%;
+          left: 32%;
+          font-family: $letter1;
+          font-size: 1.5em;
+          transition: 1s;
+          color: white;
+          @media (max-width: $tablet) {
+            top: 79%;
+            left: 30%;
+            font-size: 1.2em;
+          }
+          @media (max-width: $smartPhone) {
+            top: 79%;
+            left: 30%;
+            font-size: 0.7em;
+          }
+        }
+        &:before {
+          content: url(../assets/images/play-icon.svg);
+          width: 6em;
+          height: 6em;
+          position: absolute;
+          top: 25%;
+          left: 35%;
+          animation: 2s play;
+          border-radius: 50px;
+          @keyframes play {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 99;
+              transform: scale(1.1);
+              background-color: rgba(255, 255, 255, 0.616);
+            }
+          }
+          @media (max-width: $tablet) {
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+          }
+
+          @media (max-width: $smartPhone) {
+            width: 3em;
+            height: 3em;
+            top: 16%;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+  .chapter4 {
+    .chap-img {
+      background-image: url(../assets/images/chapter4.jpg);
+
+      &:hover {
+        transform: scale(1.1);
+        &:after {
+          content: "Episodio 4";
+          position: absolute;
+          top: 82%;
+          left: 32%;
+          font-family: $letter1;
+          font-size: 1.5em;
+          transition: 1s;
+          color: white;
+          @media (max-width: $tablet) {
+            top: 79%;
+            left: 30%;
+            font-size: 1.2em;
+          }
+          @media (max-width: $smartPhone) {
+            top: 79%;
+            left: 30%;
+            font-size: 0.7em;
+          }
+        }
+        &:before {
+          content: url(../assets/images/play-icon.svg);
+          width: 6em;
+          height: 6em;
+          position: absolute;
+          top: 25%;
+          left: 35%;
+          animation: 2s play;
+          border-radius: 50px;
+          @keyframes play {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 99;
+              transform: scale(1.1);
+              background-color: rgba(255, 255, 255, 0.616);
+            }
+          }
+          @media (max-width: $tablet) {
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+          }
+
+          @media (max-width: $smartPhone) {
+            width: 3em;
+            height: 3em;
+            top: 16%;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+  .chapter5 {
+    .chap-img {
+      background-image: url(../assets/images/chapter5.jpg);
+
+      &:hover {
+        transform: scale(1.1);
+        &:after {
+          content: "Episodio 5";
+          position: absolute;
+          top: 82%;
+          left: 32%;
+          font-family: $letter1;
+          font-size: 1.5em;
+          transition: 1s;
+          color: white;
+          @media (max-width: $tablet) {
+            top: 79%;
+            left: 30%;
+            font-size: 1.2em;
+          }
+          @media (max-width: $smartPhone) {
+            top: 79%;
+            left: 30%;
+            font-size: 0.7em;
+          }
+        }
+        &:before {
+          content: url(../assets/images/play-icon.svg);
+          width: 6em;
+          height: 6em;
+          position: absolute;
+          top: 25%;
+          left: 35%;
+          animation: 2s play;
+          border-radius: 50px;
+          @keyframes play {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 99;
+              transform: scale(1.1);
+              background-color: rgba(255, 255, 255, 0.616);
+            }
+          }
+          @media (max-width: $tablet) {
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+          }
+
+          @media (max-width: $smartPhone) {
+            width: 3em;
+            height: 3em;
+            top: 16%;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+  .chapter6 {
+    .chap-img {
+      background-image: url(../assets/images/chapter6.jpg);
+
+      &:hover {
+        transform: scale(1.1);
+        &:after {
+          content: "Episodio 6";
+          position: absolute;
+          top: 82%;
+          left: 32%;
+          font-family: $letter1;
+          font-size: 1.5em;
+          transition: 1s;
+          color: white;
+          @media (max-width: $tablet) {
+            top: 79%;
+            left: 30%;
+            font-size: 1.2em;
+          }
+          @media (max-width: $smartPhone) {
+            top: 79%;
+            left: 30%;
+            font-size: 0.7em;
+          }
+        }
+        &:before {
+          content: url(../assets/images/play-icon.svg);
+          width: 6em;
+          height: 6em;
+          position: absolute;
+          top: 25%;
+          left: 35%;
+          animation: 2s play;
+          border-radius: 50px;
+          @keyframes play {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 99;
+              transform: scale(1.1);
+              background-color: rgba(255, 255, 255, 0.616);
+            }
+          }
+          @media (max-width: $tablet) {
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+          }
+
+          @media (max-width: $smartPhone) {
+            width: 3em;
+            height: 3em;
+            top: 16%;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+  .chapter7 {
+    .chap-img {
+      background-image: url(../assets/images/chapter7.jpg);
+
+      &:hover {
+        transform: scale(1.1);
+        &:after {
+          content: "Episodio 7";
+          position: absolute;
+          top: 82%;
+          left: 32%;
+          font-family: $letter1;
+          font-size: 1.5em;
+          transition: 1s;
+          color: white;
+          @media (max-width: $tablet) {
+            top: 79%;
+            left: 30%;
+            font-size: 1.2em;
+          }
+          @media (max-width: $smartPhone) {
+            top: 79%;
+            left: 30%;
+            font-size: 0.7em;
+          }
+        }
+        &:before {
+          content: url(../assets/images/play-icon.svg);
+          width: 6em;
+          height: 6em;
+          position: absolute;
+          top: 25%;
+          left: 35%;
+          animation: 2s play;
+          border-radius: 50px;
+          @keyframes play {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 99;
+              transform: scale(1.1);
+              background-color: rgba(255, 255, 255, 0.616);
+            }
+          }
+          @media (max-width: $tablet) {
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+          }
+
+          @media (max-width: $smartPhone) {
+            width: 3em;
+            height: 3em;
+            top: 16%;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+  .chapter8 {
+    .chap-img {
+      background-image: url(../assets/images/chapter9.jpg);
+
+      &:hover {
+        transform: scale(1.1);
+        &:after {
+          content: "Episodio 8";
+          position: absolute;
+          top: 82%;
+          left: 32%;
+          font-family: $letter1;
+          font-size: 1.5em;
+          transition: 1s;
+          color: white;
+          @media (max-width: $tablet) {
+            top: 79%;
+            left: 30%;
+            font-size: 1.2em;
+          }
+          @media (max-width: $smartPhone) {
+            top: 79%;
+            left: 30%;
+            font-size: 0.7em;
+          }
+        }
+        &:before {
+          content: url(../assets/images/play-icon.svg);
+          width: 6em;
+          height: 6em;
+          position: absolute;
+          top: 25%;
+          left: 35%;
+          animation: 2s play;
+          border-radius: 50px;
+          @keyframes play {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 99;
+              transform: scale(1.1);
+              background-color: rgba(255, 255, 255, 0.616);
+            }
+          }
+          @media (max-width: $tablet) {
+            width: 5em;
+            height: 5em;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+          }
+
+          @media (max-width: $smartPhone) {
+            width: 3em;
+            height: 3em;
+            top: 16%;
+            left: 32%;
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  margin: 0 auto;
+  padding: 0 $padding1;
+  width: 100%;
+  @media (max-width: $tablet) {
+    padding: 0 2em;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        text-decoration: none;
+        color: gray;
+        font-family: $letter1;
+        padding: 5px;
+        font-size: 0.8em;
+        width: 190px;
+        @media (max-width: $smartPhone) {
+          font-size: 0.7em;
+        }
+
+        &:hover {
+          color: white;
+          transition: 1s;
+        }
+      }
+    }
+  }
+
+  .icons {
+    justify-content: center;
+    display: flex;
+    color: white;
+
+    span {
+      justify-content: center;
+      color: gray;
+      display: flex;
+
+      &:hover {
+        color: white;
+        transition: 1s;
+      }
+      .fa-facebook-square {
+        margin: 40px;
+        height: 30px;
+        width: 30px;
+        @media (max-width: $smartPhone) {
+          margin: 15px;
+        }
+      }
+      .fa-instagram {
+        margin: 40px;
+        height: 30px;
+        width: 30px;
+        @media (max-width: $smartPhone) {
+          margin: 15px;
+        }
+      }
+
+      .fa-twitter {
+        margin: 40px;
+        height: 30px;
+        width: 30px;
+        @media (max-width: $smartPhone) {
+          margin: 15px;
+        }
+      }
+      .fa-youtube {
+        margin: 40px;
+        height: 30px;
+        width: 30px;
+        @media (max-width: $smartPhone) {
+          margin: 15px;
+        }
+      }
+    }
+  }
+}

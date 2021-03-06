@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+$letter1: "Open Sans";
+$padding1: 5.4em;
+$tablet: 768px;
+$smartPhone: 320px;
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+.page-wrapper {
+  overflow: hidden;
+}
+.header {
+  background-color: rgba(0, 0, 0, 0.603);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 11;
+  @media (max-width: 960px) {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .burguer-icon {
+    .fa-bars {
+      height: 40px;
+      width: 40px;
+      color: white;
+      margin: 1em;
+      display: none;
+      @media (max-width: 960px) {
+        display: flex;
+        margin: 1em 1.5em;
+      }
+    }
+  }
+  .logo {
+    padding: 1em;
+    margin-left: 72px;
+    @media (max-width: 960px) {
+      margin: 0px;
+      padding: 1em 0px;
+    }
+  }
+
+  .links {
+    display: flex;
+    margin: 0 2em;
+
+    @media (max-width: 960px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 99%;
+      margin: 0.1px;
+      background-color: rgba(0, 0, 0, 0.9);
+      height: 1000vh;
+
+      &.open {
+        display: flex;
+      }
+    }
+  }
+  .link-item {
+    color: white;
+    text-decoration: none;
+    padding: 1.6em;
+    font-family: $letter1;
+    font-weight: bold;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.432);
+      transition: 1s;
+    }
+  }
+}
+.hero {
+  background-image: url("https://lanetaneta.com/wp-content/uploads/2020/03/Temporada-2-de-Verano-negro-Retraso-en-la-produccion-debido.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: $letter1;
+  padding: $padding1;
+  box-shadow: inset 0px 0px 70px 90px rgba(0, 0, 0, 9);
+  width: 100vw;
+  @media (max-width: 480px) {
+    padding: 2.4em;
+  }
+  @media (max-width: $smartPhone) {
+    padding: 1em 0.5em;
+  }
+
+  .h2 {
+    padding-top: 120px;
+    font-size: 1.4em;
+    font-weight: 600;
+    @media (max-width: $smartPhone) {
+      font-size: 1em;
+    }
+  }
+  .h1 {
+    font-size: 5em;
+    line-height: 70px;
+    margin: 10px 0px;
+    width: 20%;
+    @media (max-width: 425px) {
+      font-size: 4em;
+      line-height: 50px;
+    }
+    @media (max-width: $smartPhone) {
+      font-size: 3em;
+      line-height: 40px;
+    }
+  }
+  .button {
+    background-color: rgba(255, 255, 255, 0.349);
+    border: none;
+    height: 50px;
+    color: white;
+    border-radius: 9px;
+    width: 150px;
+    margin-right: 20px;
+    font-weight: lighter;
+    @media (max-width: 520px) {
+      width: 130px;
+    }
+    @media (max-width: 425px) {
+      width: 110px;
+      margin-right: 10px;
+    }
+    @media (max-width: $smartPhone) {
+      width: 100px;
+      margin: 0 5px;
+    }
+
+    &:hover.repro {
+      background: RED;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.644);
+      transition: 1s;
+    }
+  }
+  .text {
+    font-size: 1em;
+    width: 37%;
+    line-height: 33px;
+    letter-spacing: 1px;
+    @media (max-width: 960px) {
+      width: auto;
+    }
+    @media (max-width: 480px) {
+      width: auto;
+    }
+  }
+  .descrip {
+    @media (max-width: $smartPhone) {
+      display: none;
+    }
+  }
+}
+.series-page {
+  padding: 2.4em;
+  @media (max-width: 480px) {
+    padding: 1.4em;
+  }
+  @media (max-width: $smartPhone) {
+    padding: 0;
+  }
+
+  .series {
+    scrollbar-width: none;
+
+    h2 {
+      color: white;
+      font-family: $letter1;
+      padding-left: 60px;
+      font-size: 1.2em;
+      @media (max-width: $smartPhone) {
+        padding: 1em;
+        font-size: 0.8em;
+      }
+    }
+    .carrousel {
+      margin: 0 auto;
+      display: flex;
+      width: 92%;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      img {
+        max-width: 340px;
+        height: 190px;
+        @media (max-width: 480px) {
+          max-width: 290px;
+          max-height: 162px;
+        }
+        @media (max-width: $smartPhone) {
+          max-width: 150px;
+          max-height: 80px;
+        }
+      }
+      .photo {
+        position: relative;
+
+        .view {
+          height: 5px;
+          width: 300px;
+          background-color: gray;
+          margin: 8px auto;
+          @media (max-width: $smartPhone) {
+            max-width: 130px;
+            height: 2px;
+          }
+          @media (max-width: 480px) {
+            width: 250px;
+          }
+
+          .view2 {
+            height: 5px;
+            width: 150px;
+            background-color: rgba(255, 0, 0, 0.678);
+            @media (max-width: $smartPhone) {
+              max-width: 80px;
+              height: 2px;
+            }
+            @media (max-width: 480px) {
+              width: 100px;
+            }
+          }
+        }
+        img {
+          width: 340px;
+          height: 190px;
+          @media (max-width: $smartPhone) {
+            max-width: 150px;
+            height: 80px;
+          }
+          @media (max-width: 480px) {
+            width: 290px;
+            height: 162px;
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  margin: 0 auto;
+  padding: 0 $padding1;
+  width: 100%;
+  @media (max-width: $tablet) {
+    padding: 0 2em;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        text-decoration: none;
+        color: gray;
+        font-family: $letter1;
+        padding: 5px;
+        font-size: 0.8em;
+        width: 190px;
+        @media (max-width: $smartPhone) {
+          font-size: 0.7em;
+        }
+
+        &:hover {
+          color: white;
+          transition: 1s;
+        }
+      }
+    }
+  }
+
+  .icons {
+    justify-content: center;
+    display: flex;
+    color: white;
+
+    span {
+      justify-content: center;
+      color: gray;
+      display: flex;
+
+      &:hover {
+        color: white;
+        transition: 1s;
+      }
+      .fa-facebook-square {
+        margin: 40px;
+        height: 30px;
+        width: 30px;
+        @media (max-width: $smartPhone) {
+          margin: 15px;
+        }
+      }
+      .fa-instagram {
+        margin: 40px;
+        height: 30px;
+        width: 30px;
+        @media (max-width: $smartPhone) {
+          margin: 15px;
+        }
+      }
+
+      .fa-twitter {
+        margin: 40px;
+        height: 30px;
+        width: 30px;
+        @media (max-width: $smartPhone) {
+          margin: 15px;
+        }
+      }
+      .fa-youtube {
+        margin: 40px;
+        height: 30px;
+        width: 30px;
+        @media (max-width: $smartPhone) {
+          margin: 15px;
+        }
+      }
+    }
+  }
+}
+
+.slick-prev {
+  z-index: 10;
+  left: 1rem;
+  .slick-arrow {
+  }
+}
+.slick-next {
+  z-index: 10;
+  right: 1rem;
+  .slick-arrow {
+  }
+}
+.slick-slide {
+  margin: 0.5em;
+  @media (max-width: $smartPhone) {
+    margin: 0.2em;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    box-shadow: 0px 0px 43px 14px rgba(0, 0, 0, 0.75);
+  }
+}
